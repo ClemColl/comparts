@@ -17,4 +17,7 @@ class StaticpageController < ApplicationController
 
 	def diffuser
 	end
+
+	def logpage
+	end
 end
