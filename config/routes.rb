@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  root :to => 'Static#homepage'
+  root :to => 'staticpage#homepage'
 
 #Pages statiques
 
-  get '/about' => 'Static#about'
-  get '/blog' => 'Static#blog'
-  get '/decouvrir' => 'Static#decouvrir'
-  get '/promouvoir' => 'Static#promouvoir'
-  get '/diffuser' => 'Static#diffuser'
+  get '/about' => 'staticpage#about'
+  get '/blog' => 'staticpage#blog'
+  get '/decouvrir' => 'staticpage#decouvrir'
+  get '/promouvoir' => 'staticpage#promouvoir'
+  get '/diffuser' => 'staticpage#diffuser'
 
-  
+
 end
