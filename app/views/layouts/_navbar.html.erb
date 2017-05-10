@@ -2,7 +2,7 @@
   <div id="nav">
 		<div id="brand"><%= image_tag "brand.png", class: "img-responsive" %></div>
 		<div class = "nav"><%= link_to 'Home', root_path %></div>
-		<div class = "nav">Artistes</div>
+		<div class = "nav"><%= link_to 'Artistes', users_path %></div>
 		<div class = "nav"><%= link_to 'Articles', blog_path %></div>
 		<div class = "nav"><%= link_to 'A propos', about_path %></div>
 		<div id="connect"><%= link_to 'Se connecter', new_user_registration_path %></div>

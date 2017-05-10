@@ -1,0 +1,74 @@
+<h1>Artistes à découvrir</h1>
+
+<hr>
+
+<ul>
+  <li>Musiciens</li>
+  <li>Peintres</li>
+  <li>Danseurs</li>
+</ul>
+
+<div>
+  <ul>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+      <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+    <li>
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=150%C3%97250&w=150&h=250">
+    </li>
+  </ul>
+</div>
+
+<% @artists.each do |a| %>
+<% if a[:role_id] == 'artist' %>
+ <%= a.email %>
+<% end %>
+<% end %>
