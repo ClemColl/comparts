@@ -1,0 +1,6 @@
+<h1>Artist#index</h1>
+<% @artists.each do |a| %>
+<% if a[:role_id] == 'artist' %>
+ <%= a.email %>
+<% end %>
+<% end %>

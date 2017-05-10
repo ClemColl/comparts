@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'artist/index'
+
+  get 'artist/show'
+
   devise_for :users
   root :to => 'staticpage#homepage'
 
