@@ -6,9 +6,5 @@ Rails.application.routes.draw do
 
   get '/about' => 'staticpage#about'
   get '/blog' => 'staticpage#blog'
-  get '/decouvrir' => 'staticpage#decouvrir'
-  get '/promouvoir' => 'staticpage#promouvoir'
-  get '/diffuser' => 'staticpage#diffuser'
-
 
 end

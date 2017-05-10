@@ -8,16 +8,4 @@ class StaticpageController < ApplicationController
 
 	def blog
 	end
-
-	def decouvrir
-	end
-
-	def promouvoir
-	end
-
-	def diffuser
-	end
-
-	def logpage
-	end
 end
