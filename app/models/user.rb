@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
     def is_artist?
-    	if current_user[:role_id] == 'artist'
+    	if current_user[:role_id] == 'Artiste'
     		return true
     	else
     		return false
