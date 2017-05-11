@@ -12,6 +12,6 @@ Rails.application.routes.draw do
 #Pages statiques
 
   get '/about' => 'staticpage#about'
-  get '/blog' => 'staticpage#blog'
+  get '/articles' => 'articles#index'
 
 end

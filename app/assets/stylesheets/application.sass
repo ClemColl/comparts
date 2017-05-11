@@ -19,21 +19,27 @@
 @import "bootstrap"
 @import url('https://fonts.googleapis.com/css?family=Raleway')
 
-nav
+html
+  min-height: 100%
+body
+  min-height: 100%
+  background-image: image-url("background.jpg")
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
   font-family: Raleway
-  color: white
 
 #nav
   display: flex
   flex-direction: row
   justify-content: center
   text-align: center
-  font-size: 18px
+  font-size: 22px
   margin-top: 20px
+  text-shadow: 2px 2px 1px black
 
 .nav
   width: 10%
-  height: 30px
 
 .nav:hover
   background-color: black
@@ -53,10 +59,33 @@ a:visited
 #brand
   width: 30%
   text-align: left
-  margin-left: 5%
+
+#logo
+  width: 250px
 
 #connect
   width: 30%
   text-align: right
-  margin-right: 5%
-  border: 1px solid black
+
+h2
+  margin-top: 17%
+  color: #2C99CE
+  text-shadow: 2px 2px 2px black
+
+h1
+  color: white
+  text-shadow: 2px 2px 2px black
+
+footer
+  position: absolute
+  bottom: 20%
+  width: 20%
+  margin-left: 38%
+
+.footer
+  display: flex
+  flex-direction: row
+  justify-content: center
+
+.icon
+  width: 70px
