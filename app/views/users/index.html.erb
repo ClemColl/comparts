@@ -1,6 +1,6 @@
 <h1>Artistes à découvrir</h1>
 <% @artists.each do |a| %>
-	<% if a[:role_id] == 'artist' %>
+	<% if a[:role_id] == 'Artiste' %>
  	<%= link_to 'Voir son profil', user_path(a.id) %>
  	<%= a.email %>
  	<br><br>
