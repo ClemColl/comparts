@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 <div class="body">
-  <h1 id="title">Articles</h1>
+  <h1 id="title"><strong>Articles</strong></h1>
   <div id="separator"></div>
 
       <% @articles.each do |article| %>
-          <h2><%= article.titre %></h2>
+          <h2><strong><%= article.titre %></strong></h2>
           <%= link_to "Lire cet article", article, id: "showAr" %>
       <% end %>
 <br></br>

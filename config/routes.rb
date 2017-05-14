@@ -13,5 +13,6 @@ Rails.application.routes.draw do
 
   get '/about' => 'staticpage#about'
   get '/articles' => 'articles#index'
+  get '/contact' => 'staticpage#contact'
 
 end
