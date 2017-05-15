@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'contact/new'
+
+  get 'contact/create'
+
   resources :articles
 
   devise_for :users
@@ -8,6 +12,9 @@ Rails.application.routes.draw do
   patch 'users/:id' => 'users#update'
   get '/users' => 'users#index'
   root :to => 'staticpage#homepage'
+
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
 
 #Pages statiques
 

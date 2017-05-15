@@ -29,7 +29,21 @@ Rails.application.configure do
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
-
+config.action_mailer.default_url_options = { :host => 'yoursite.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
+ 
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "ENV["GMAIL_DOMAIN"]",
+    user_name: "ENV["GMAIL_USERNAME"]", #your gmail id
+    password: "ENV["GMAIL_PASSWORD"]", #your gmail password
+    authentication: :plain,
+    enable_starttls_auto: true
+   }
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
