@@ -6,6 +6,7 @@ class StaticpageController < ApplicationController
 	def about
 	end
 
-	def blog
+	def contact
 	end
+
 end

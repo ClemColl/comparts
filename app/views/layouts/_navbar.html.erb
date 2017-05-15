@@ -1,10 +1,14 @@
 <nav>
   <div id="nav">
-		<div id="brand"><%= image_tag "brand.png", class: "img-responsive", id:"logo" %></div>
-		<div class = "nav"><%= link_to 'Home', root_path %></div>
-		<div class = "nav"><%= link_to 'Artistes', users_path %></div>
-		<div class = "nav"><%= link_to 'Articles', articles_path %></div>
-		<div class = "nav"><%= link_to 'A propos', about_path %></div>
-		<div id="connect"><%= link_to 'Se connecter', new_user_registration_path %></div>
+		<div id="brand">
+      <%= link_to root_path do %>
+        <%= image_tag "brand.png", class: "img-responsive", id:"logo" %>
+      <% end %>
+    </div>
+		<div class = "nav"><a class="navButton"<%= link_to 'Artistes', users_path %></div>
+		<div class = "nav"><a class="navButton"<%= link_to 'Articles', articles_path %></div>
+		<div class = "nav"><a class="navButton"<%= link_to 'A propos', about_path %></div>
+    <div class = "nav"><a class="navButton"<%= link_to 'Contact', root_path %></div>
+    <div id="connect"><a class="navButton"<%= link_to 'Se connecter', new_user_registration_path %></div>
   </div>
 </nav>
