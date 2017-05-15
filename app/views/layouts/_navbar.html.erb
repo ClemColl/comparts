@@ -5,10 +5,10 @@
         <%= image_tag "brand.png", class: "img-responsive", id:"logo" %>
       <% end %>
     </div>
-		<div class = "nav"><a class="navButton"<%= link_to 'Artistes', users_path %></div>
-		<div class = "nav"><a class="navButton"<%= link_to 'Articles', articles_path %></div>
-		<div class = "nav"><a class="navButton"<%= link_to 'A propos', about_path %></div>
-    <div class = "nav"><a class="navButton"<%= link_to 'Contact', contacts_path %></div>
-    <div id="connect"><a class="navButton"<%= link_to 'Se connecter', new_user_registration_path %></div>
+		<div class = "nav"><%= link_to 'Artistes', users_path , class: "navButton" %></div>
+		<div class = "nav"><%= link_to 'Articles', articles_path, class: "navButton" %></div>
+		<div class = "nav"><%= link_to 'A propos', about_path, class: "navButton" %></div>
+    <div class = "nav"><%= link_to 'Contact', new_contact_path, class: "navButton" %></div>
+    <div id="connect"><%= link_to 'Se connecter', new_user_registration_path, class: "navButton" %></div>
   </div>
 </nav>
