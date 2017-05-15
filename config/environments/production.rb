@@ -41,7 +41,7 @@ config.action_mailer.default_url_options = { :host => 'comparts.herokuapp.com' }
     domain: ENV["GMAIL_DOMAIN"],
     user_name: ENV["GMAIL_USERNAME"], #your gmail id
     password: ENV["GMAIL_PASSWORD"], #your gmail password
-    authentication: :plain,
+    authentication: "plain",
     enable_starttls_auto: true
    }
   # Specifies the header that your server uses for sending files.
