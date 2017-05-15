@@ -38,9 +38,9 @@ config.action_mailer.default_url_options = { :host => 'comparts.herokuapp.com' }
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-    domain: "ENV["GMAIL_DOMAIN"]",
-    user_name: "ENV["GMAIL_USERNAME"]", #your gmail id
-    password: "ENV["GMAIL_PASSWORD"]", #your gmail password
+    domain: ENV["GMAIL_DOMAIN"],
+    user_name: ENV["GMAIL_USERNAME"], #your gmail id
+    password: ENV["GMAIL_PASSWORD"], #your gmail password
     authentication: :plain,
     enable_starttls_auto: true
    }
