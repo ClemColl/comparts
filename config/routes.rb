@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'contact/new'
-
-  get 'contact/create'
-
   resources :articles
 
   devise_for :users
@@ -13,13 +9,12 @@ Rails.application.routes.draw do
   get '/users' => 'users#index'
   root :to => 'staticpage#homepage'
 
-  match '/contacts',     to: 'contacts#new',             via: 'get'
-  resources "contacts", only: [:new, :create]
+  match '/contact',     to: 'contact#new',             via: 'get'
+  resources "contact", only: [:new, :create]
 
 #Pages statiques
 
   get '/about' => 'staticpage#about'
   get '/articles' => 'articles#index'
-  get '/contact' => 'staticpage#contact'
 
 end
