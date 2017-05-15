@@ -4,7 +4,7 @@ class Contact < ApplicationRecord
    	attribute :nickname,  :captcha  => true
 
    	validates_presence_of     :name,
-   	validates_presence_of     :email
+   	validates_presence_of     :email,
  
    # Declare the e-mail headers. It accepts anything the mail method
    # in ActionMailer accepts.
