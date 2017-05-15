@@ -4,11 +4,11 @@
   <%= devise_error_messages! %>
 
     <%= f.input :email %>
+    <%= f.input :role_id, :collection => [['Artiste', 'Artiste'], ['Pro','Pro'], ['Utilisateur', 'User']], :as => :radio_buttons %>
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> charactères minimum)</em>
       <% end %><br />
     <%= f.input :password %>
-    <%= f.collection_radio_buttons :role_id, [[artist, 'artist'] ,[pro 'pro'], [utilisateur, 'user']] %>
     <%= f.input :password_confirmation %>
 
     <%= f.button :submit %>
