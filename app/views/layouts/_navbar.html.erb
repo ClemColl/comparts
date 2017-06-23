@@ -5,10 +5,26 @@
         <%= image_tag "brand.png", class: "img-responsive", id:"logo" %>
       <% end %>
     </div>
-		<div class = "nav"><%= link_to 'Artistes', users_path , class: "navButton" %></div>
+    <% if current_user %>
+      <% if current_user.role_id == "Artiste" || current_user.role_id == "Pro" %>
+        <div class = "nav"><a class="navButton" href='/users/<%= current_user.id %>'>Ma page</a></div>
+      <% end %>
+		<% end %>
+    <% if current_user %>
+      <% if current_user.role_id == "Artiste" %>
+        <div class = "nav"><%= link_to 'Pros', '/pros' , class: "navButton" %></div>
+      <% end %>
+    <% end %>
+    <div class = "nav"><%= link_to 'Artistes', users_path , class: "navButton" %></div>
 		<div class = "nav"><%= link_to 'Articles', articles_path, class: "navButton" %></div>
 		<div class = "nav"><%= link_to 'A propos', about_path, class: "navButton" %></div>
     <div class = "nav"><%= link_to 'Contact', contacts_path, class: "navButton" %></div>
-    <div id="connect"><%= link_to 'Se connecter', new_user_registration_path, class: "navButton" %></div>
+    <div id="connect">
+
+    <% if current_user %>
+      <%= link_to 'Se déconnecter', destroy_user_session_path, :method => :delete, class: "navButton" %></div>
+    <% else %>
+      <%= link_to 'Se connecter', new_user_registration_path, class: "navButton" %></div>
+    <% end %>
   </div>
 </nav>

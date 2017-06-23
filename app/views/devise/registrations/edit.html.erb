@@ -1,3 +1,6 @@
+<% if current_user.role_id == "User" %>
+	<script>window.location.replace("/");</script>
+<% end %>
 <h2>Complétez votre profil <%= current_user.role_id %></h2>
 
 
@@ -10,7 +13,6 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-<%= f.input :role_id %>
 <%= f.input :nom %>
 <%= f.input :facebook %>
 <%= f.input :twitter %>
@@ -22,9 +24,5 @@
 
 <% end %>
 
-<h3>Supprimer mon compte</h3>
-
-<p><%= button_to "Supprimez mon compte", registration_path(resource_name), data: { confirm: "Etes vous sur?" }, method: :delete %></p>
-
 <h3>Je complèterai mon profil plus tard</h3>
-<%= link_to 'Ma page', root_url %>
+<%= link_to 'Ma page', @user %>

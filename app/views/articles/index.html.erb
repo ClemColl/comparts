@@ -3,10 +3,9 @@
   <h1 id="title"><strong>Articles</strong></h1>
   <div id="separator"></div>
 
-      <% @articles.each do |article| %>
+      <% @articles.order(:id).each do |article| %>
+      	<a href='/articles/<%= article.id %>'>
           <h2><strong><%= article.titre %></strong></h2>
-          <%= link_to "Lire cet article", article, id: "showAr" %>
+        </a>
       <% end %>
-<br></br>
-  <%= link_to 'Nouvel article', new_article_path, id: "newAr" %>
 </div>

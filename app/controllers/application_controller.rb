@@ -3,7 +3,9 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(resource_or_scope)
- 	edit_user_registration_path
+    unless current_user.sign_in_count > 1
+ 	    edit_user_registration_path
+    end
   end
 
   protected

@@ -1,0 +1,8 @@
+<h1>Pros à découvrir</h1>
+<% @pro.each do |a| %>
+	<% if a[:role_id] == 'Pro' %>
+ 	<%= link_to 'Voir son profil', user_path(a.id) %>
+ 	<%= a.email %>
+ 	<br><br>
+	<% end %>
+<% end %>

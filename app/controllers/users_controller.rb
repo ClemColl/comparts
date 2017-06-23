@@ -1,10 +1,29 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_user!
+  
   def index
-  	@artists = User.all
+      #unless current_user.role_id == "User"
+        @artists = User.all
+      #else
+      #  redirect_to root_url
+      #end
+  	
   end
 
   def show
   	@artist = User.find(params[:id])
+  end
+
+  def index_pro
+      unless current_user.role_id == "User"
+        @pro = User.all
+      else
+        redirect_to root_url
+      end
+  end
+
+  def my_account
+    @user = current_user
   end
 
 def update

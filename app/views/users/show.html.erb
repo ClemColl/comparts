@@ -1,2 +1,12 @@
-<h1>Page de l'artiste</h1>
+<h1>Page <%= @artist.role_id %> de <%= @artist.nom %></h1>
+
 <%= @artist.email %>
+<%= @artist.facebook %>
+<%= @artist.twitter %>
+<%= @artist.instagram %>
+<%= @artist.adresse %>
+<%= @artist.phone %>
+
+<% if @artist.id == current_user.id %>
+<%= link_to 'Modifier mon profil', '/my_account' %>
+<% end %>

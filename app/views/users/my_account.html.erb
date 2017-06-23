@@ -1,0 +1,22 @@
+<h1>Modifier mon compte</h1>
+
+<%= simple_form_for(@user, html: { class: 'form-horizontal' }, method: :patch) do |f| %>
+
+<%= f.input :email %>
+
+<% unless current_user.role_id == "User" %>
+<%= f.input :nom %>
+<%= f.input :facebook %>
+<%= f.input :twitter %>
+<%= f.input :instagram %>
+<%= f.input :description %>
+<%= f.input :adresse %>
+<%= f.input :phone %>
+<% end %>
+<%= f.button :submit, 'Mettre à jour le profil'%>
+
+<% end %>
+
+<p><%= button_to "Supprimez mon compte", registration_path(@user), data: { confirm: "Etes vous sur?" }, method: :delete %></p>
+
+<%= link_to "Revenir à l'accueil", root_url %>
