@@ -23,10 +23,11 @@ html
   min-height: 100%
 body
   min-height: 100%
-  background-image: image-url("background.jpg")
+  background-image: url("background.jpg")
   background-position: center center
   background-repeat: no-repeat
   background-size: cover
+  background-attachment: fixed
   font-family: Raleway
 
 #nav
@@ -40,9 +41,12 @@ body
 
 .nav
   width: 10%
+  border-radius: 5px
+  position: static
 
 .nav:hover
   background-color: black
+  transition: all 0.4s ease-in
 
 .navButton:hover
   text-decoration: none
@@ -58,10 +62,11 @@ body
 
 #brand
   width: 30%
-  text-align: left
+  margin-left: -5%
+  margin-right: 5%
 
 #logo
-  width: 250px
+  width: 300px
 
 #connect
   width: 30%
@@ -77,11 +82,11 @@ body
   text-shadow: 2px 2px 2px black
 
 footer
-  position: relative
-  bottom: 20%
+  position: absolute
+  bottom: 10%
   width: 20%
-  margin-left: 40%
-  margin-top: 7%
+  margin-left: 39%
+  margin-top: 10%
 
 .footer
   display: flex
@@ -90,3 +95,19 @@ footer
 
 .icon
   width: 70px
+
+#about
+  background-color: white
+  opacity: 0.80
+  padding-bottom: 2%
+  margin-top: 3%
+
+#about > p
+  font-size: 1.3em
+  padding-left: 1%
+  padding-right: 1%
+
+#about > h1
+  color: #2c99ce
+  font-style: italic
+  padding-top: 1%

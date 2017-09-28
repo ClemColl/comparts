@@ -20,11 +20,10 @@
 		<div class = "nav"><%= link_to 'A propos', about_path, class: "navButton" %></div>
     <div class = "nav"><%= link_to 'Contact', contacts_path, class: "navButton" %></div>
     <div id="connect">
-
-    <% if current_user %>
-      <%= link_to 'Se déconnecter', destroy_user_session_path, :method => :delete, class: "navButton" %></div>
-    <% else %>
-      <%= link_to 'Se connecter', new_user_registration_path, class: "navButton" %></div>
-    <% end %>
-  </div>
+      <% if current_user %>
+        <%= link_to 'Se déconnecter', destroy_user_session_path, :method => :delete, class: "navButton" %></div>
+      <% else %>
+        <%= link_to 'Se connecter', new_user_registration_path, class: "navButton" %></div>
+      <% end %>
+    </div>
 </nav>
