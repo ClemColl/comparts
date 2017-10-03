@@ -1,6 +1,12 @@
+<% content_for :meta_title, "Homepage" %>
+<% content_for :meta_description, "Description" %>
 <div class="contact-form">
    <h3 id="titleCon"><strong>Nous envoyer un message</strong></h3>
    <div id="separator"></div>
+<%# content_for :meta_image, cloudinary_url(@offer.photo.path) %>
+<div align="center">
+   <h3>Nous envoyer un message</h3>
+
    <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
      <div class="input">
        <%= f.input :nom, :required => true %>

@@ -9,4 +9,7 @@ class StaticpageController < ApplicationController
 	def contact
 	end
 
+	def news
+	end
+
 end

@@ -26,7 +26,7 @@ Rails.application.configure do
   config.assets.compile = false
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
-
+  GA.tracker = "UA-86804446-1"
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
 config.action_mailer.default_url_options = { :host => 'comparts.herokuapp.com' }

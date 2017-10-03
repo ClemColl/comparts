@@ -1,3 +1,7 @@
+<% content_for :meta_title, "Homepage" %>
+<% content_for :meta_description, "Description" %>
+<%# content_for :meta_image, cloudinary_url(@offer.photo.path) %>
+
 <h1>Artistes à découvrir</h1>
 <% @artists.each do |a| %>
 	<% if a[:role_id] == 'Artiste' %>
