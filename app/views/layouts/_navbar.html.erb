@@ -12,7 +12,7 @@
 		<% end %>
     <% if current_user %>
       <% if current_user.role_id == "Artiste" %>
-        <div class = "nav"><%= link_to 'Pros', '/pros' , class: "navButton" %></div>
+        <div class = "nav" id="Pros"><%= link_to 'Pros', '/pros' , class: "navButton" %></div>
       <% end %>
     <% end %>
     <div class = "nav"><%= link_to 'Artistes', users_path , class: "navButton" %></div>

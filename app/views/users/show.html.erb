@@ -7,6 +7,7 @@
 <%= @artist.adresse %>
 <%= @artist.phone %>
 
+
 <% if @artist.id == current_user.id %>
 <%= link_to 'Modifier mon profil', '/my_account' %>
 <% end %>

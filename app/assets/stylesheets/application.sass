@@ -33,16 +33,19 @@ body
 #nav
   display: flex
   flex-direction: row
-  justify-content: center
+  justify-content: space-between
   text-align: center
   font-size: 22px
   margin-top: 20px
   text-shadow: 2px 2px 4px black
 
 .nav
-  width: 10%
+  width: 15%
   border-radius: 5px
-  position: static
+  position: relative
+
+#Pros
+  width: 10%
 
 .nav:hover
   background-color: black
@@ -82,11 +85,11 @@ body
   text-shadow: 2px 2px 2px black
 
 footer
-  position: absolute
-  bottom: 10%
+  position: relative
+  height: 100px
   width: 20%
-  margin-left: 39%
-  margin-top: 10%
+  margin-top: 5%
+  margin-left: 40%
 
 .footer
   display: flex
@@ -98,16 +101,55 @@ footer
 
 #about
   background-color: white
-  opacity: 0.80
+  opacity: 0.90
   padding-bottom: 2%
   margin-top: 3%
+  width: 70%
+  padding-right: 2%
+  padding-left: 2%
 
 #about > p
   font-size: 1.3em
   padding-left: 1%
   padding-right: 1%
+  text-align: justify
 
 #about > h1
   color: #2c99ce
   font-style: italic
   padding-top: 1%
+
+//Registration form
+.formNew
+  display: block
+  background-color: white
+  opacity: 0.90
+  width: 50%
+  padding-bottom: 10px
+  padding-top: 5px
+  margin-top: 2%
+
+.formNew h2
+  font-style: italic
+  color: #2C99CE
+  font-weight: bold
+
+em
+  color: #2c99ce
+
+.user_role_id
+  width: 100%
+
+.radio
+  display: inline-block
+  margin-left: 10%
+
+.radio input
+  float: left
+
+.control-label
+  display: block
+  text-align: center !important
+
+.control-label.radio_buttons.required
+  left: 1%
