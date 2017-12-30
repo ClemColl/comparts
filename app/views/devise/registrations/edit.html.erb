@@ -1,7 +1,9 @@
 <% if current_user.role_id == "User" %>
 	<script>window.location.replace("/");</script>
 <% end %>
+<div class="formNew">
 <h2>Complétez votre profil <%= current_user.role_id %></h2>
+<div id="separator"></div>
 
 
 <%= simple_form_for(@user, html: { class: 'form-horizontal' }, method: :patch) do |f| %>
@@ -19,10 +21,11 @@
 <%= f.input :instagram %>
 <%= f.input :description %>
 <%= f.input :adresse %>
-<%= f.input :phone %>
-<%= f.button :submit %>
+<%= f.input :phone, label: 'Téléphone' %>
+<%= f.button :submit, 'Enregistrer les modifications' %>
 
 <% end %>
-
+<div id="separator"></div>
 <h3>Je complèterai mon profil plus tard</h3>
 <%= link_to 'Ma page', @user %>
+</div>

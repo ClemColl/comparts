@@ -1,9 +1,10 @@
 <% content_for :meta_title, "Connexion sur la plateforme - Comp'Arts la plateforme artistique de Bordeaux" %>
 <%# content_for :meta_description, "Description" %>
-
+<div class="formNew">
 <h2>Connexion</h2>
+<div id="separator"></div>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { style: 'margin-right: 130px'}) do |f| %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
@@ -24,6 +25,8 @@
   <div class="actions">
     <%= f.submit "Se connecter" %>
   </div>
+
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>

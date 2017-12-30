@@ -1,11 +1,10 @@
-<% content_for :meta_title, "Homepage" %>
-<% content_for :meta_description, "Description" %>
+<% content_for :meta_title, "Contactez nous - Comp'Arts la plateforme artistique de Bordeaux" %>
+<% content_for :meta_description, "Par ici si vous avez des questions par rapport à l'intérêt ou le fonctionnement de notre plateforme. Suggestion, critique, témoignage, nous répondrons à tout" %>
 <div class="contact-form">
    <h3 id="titleCon"><strong>Nous envoyer un message</strong></h3>
    <div id="separator"></div>
 <%# content_for :meta_image, cloudinary_url(@offer.photo.path) %>
 <div align="center">
-   <h3>Nous envoyer un message</h3>
 
    <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
      <div class="input">

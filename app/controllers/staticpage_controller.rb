@@ -12,4 +12,7 @@ class StaticpageController < ApplicationController
 	def news
 	end
 
+	def map
+	end
+
 end

@@ -70,6 +70,7 @@ GEM
       sass (>= 3.2)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    gmaps4rails (2.1.2)
     google-analytics-rails (1.1.1)
     i18n (0.8.1)
     jbuilder (2.6.4)
@@ -188,6 +189,7 @@ DEPENDENCIES
   devise
   devise-i18n
   font-awesome-sass
+  gmaps4rails
   google-analytics-rails
   jbuilder (~> 2.5)
   jquery-rails
