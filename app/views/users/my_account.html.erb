@@ -7,18 +7,23 @@
 
 <%= simple_form_for(@user, html: { class: 'form-horizontal' }, method: :patch) do |f| %>
 
-<%= f.input :email %>
+    <%= f.input :email %>
+    <% unless current_user.role_id == "User" %>
+        <%= f.input :nom %>
+        <%= f.input :facebook %>
+        <p>https://www.facebook.com/<strong>FacebookFrance</strong></p>
+        <%= f.input :twitter %>
+        <p>https://twitter.com/<strong>twitter</strong></p>
+        <%= f.input :instagram %>
+       <p>https://www.instagram.com/<strong>instagram</strong></p>
+        <%= f.input :description %>
+            <% if current_user.role_id == "Pro" %>
+                <%= f.input :adresse %>
+                <%= f.input :phone, label: 'Téléphone' %>
+            <% end %>
+    <% end %>
 
-<% unless current_user.role_id == "User" %>
-<%= f.input :nom %>
-<%= f.input :facebook %>
-<%= f.input :twitter %>
-<%= f.input :instagram %>
-<%= f.input :description %>
-<%= f.input :adresse %>
-<%= f.input :phone %>
-<% end %>
-<%= f.button :submit, 'Mettre à jour le profil'%>
+    <%= f.button :submit, 'Mettre à jour le profil'%>
 
 <% end %>
 

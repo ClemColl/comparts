@@ -1,7 +1,7 @@
-<% content_for :meta_title, "Homepage" %>
-<% content_for :meta_description, "Description" %>
-<div class="formNew">
-    <div>
+<% content_for :meta_description, @artist.description %>
+<div style="background:white;opacity:0.90;height:100%;width:50%;padding-bottom:10px;">
+    <div style="width:50%;">
+
         <h1><%= @artist.nom %></h1>
 
         <p>
@@ -11,14 +11,37 @@
             Artiste
         <% end %>
         </p>
+
+        <div>
+            <a style="margin-right:20px;" href="https://www.facebook.com/<%= @artist.facebook %>">
+                <img width="32px" height="32px" src="https://image.freepik.com/icones-gratuites/symbole-facebook_318-37686.jpg">
+            </a>
+            <a href="https://twitter.com/<%= @artist.twitter %>">
+                <img width="32px" height="32px" src="https://image.freepik.com/icones-gratuites/twitter-logo_318-40459.jpg">
+            </a>
+            <a style="margin-left:20px;" href="https://www.instagram.com/<%= @artist.instagram %>">
+                <img width="32px" height="32px" src="https://seeklogo.com/images/I/instagram-new-2016-glyph-logo-84CB825424-seeklogo.com.png">
+            </a>
+        </div>
+
+        <hr>
+        <% if @artist.role_id == "Pro" %>
+            <h4 style="font-family:Arial;">
+                <% if @artist.phone %>
+                    0<%= @artist.phone %>
+                <% end %>
+
+                <% unless @artist.adresse == "" %>
+                     - <%= @artist.adresse %>
+                <% end %>
+                </h4>
+        <% end %>
+        <p>
+        <%= @artist.description %>
+        </p>
+        
+        <% if @artist.id == current_user.id %>
+            <%= link_to 'Modifier mon profil', '/my_account' %>
+        <% end %>
     </div>
-
-	<div class="icon" style="background-color:black;"><a href="https://www.facebook.com/<%= @artist.facebook %>"><%= image_tag "facebook-logo.png" %></a></div>
-	<div class="icon" style="background-color:black;"><a href="https://twitter.com/<%= @artist.twitter %>"><%= image_tag "twitter-logo.png" %></a></div>
-	<div class="icon" style="background-color:black;"><a href="https://www.instagram.com/<%= @artist.instagram %>"><%= image_tag "instagram.png" %></a></div>
-
-
-<% if @artist.id == current_user.id %>
-<%= link_to 'Modifier mon profil', '/my_account' %>
-<% end %>
 </div>

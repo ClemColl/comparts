@@ -29,10 +29,10 @@ Rails.application.configure do
   GA.tracker = "UA-86804446-1"
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
-config.action_mailer.default_url_options = { :host => 'comparts.herokuapp.com' }
+config.action_mailer.default_url_options = { :host => 'http://www.comparts-bordeaux.fr' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
  
   config.action_mailer.smtp_settings = {
